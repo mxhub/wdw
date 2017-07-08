@@ -55,6 +55,21 @@
     <script type="text/javascript">
         app.initialize();
     </script>
+
+<script type="text/javascript">
+/*Using Jquery Load()*/
+$('#Load').load('http://www.google.co.in');
+
+/*Using ajax*/
+$.ajax({
+  dataType:'html',
+  url:'http://www.google.co.in',
+  success:function(data) {
+    $('#ajax').html($(data).children());   
+  }
+});
+</script>
+
 </body>
 
 </html>
